@@ -9,28 +9,28 @@ A comprehensive framework for detecting fraudulent financial activities using Gr
 ## 📑 Table of Contents
 
 - [Financial Fraud Detection using Graph Neural Networks](#financial-fraud-detection-using-graph-neural-networks)
-  - [🎯 Key Features](#-key-features)
-  - [📊 Performance Metrics](#-performance-metrics)
-  - [🏗️ System Architecture](#️-system-architecture)
+  - [Key Features](#-key-features)
+  - [Performance Metrics](#-performance-metrics)
+  - [System Architecture](#️-system-architecture)
     - [Core Components](#core-components)
-  - [🚀 Quick Start](#-quick-start)
+
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Basic Usage](#basic-usage)
-  - [📁 Project Structure](#-project-structure)
-  - [🔧 Advanced Configuration](#-advanced-configuration)
+  - [Project Structure](#-project-structure)
+  - [Advanced Configuration](#-advanced-configuration)
     - [Training Parameters](#training-parameters)
     - [Key Arguments](#key-arguments)
-  - [📈 Model Architecture](#-model-architecture)
-  - [🎪 Fraud Patterns Detected](#-fraud-patterns-detected)
+  - [Model Architecture](#-model-architecture)
+  - [Fraud Patterns Detected](#-fraud-patterns-detected)
     - [1. Circular Transactions](#1-circular-transactions)
     - [2. Money Laundering Rings](#2-money-laundering-rings)
-  - [📊 Generated Outputs](#-generated-outputs)
-  - [🧪 Example Results](#-example-results)
-  - [🔬 Methodology](#-methodology)
+  - [Generated Outputs](#-generated-outputs)
+  - [Example Results](#-example-results)
+  - [Methodology](#-methodology)
     - [Feature Engineering](#feature-engineering)
     - [Data Splitting](#data-splitting)
-  - [🛠️ Development](#️-development)
+  - [Development](#️-development)
     - [Adding New Features](#adding-new-features)
     - [Custom Fraud Patterns](#custom-fraud-patterns)
  
@@ -99,16 +99,16 @@ Data Generation → Feature Extraction → Dataset Preparation → GNN Training 
    Start-Process .\topk_subgraph.png
 
 # Project Structure
-fraud-graph-gnn/
-├── data_gen.py           # Synthetic graph generation
-├── features.py           # Graph feature extraction
-├── dataset.py            # PyTorch Geometric data conversion
-├── model.py              # GCN model architecture
-├── train_improved.py     # Enhanced training pipeline
-├── visualize_topk.py     # Suspicious nodes visualization
-├── utils.py              # Utility functions
-├── requirements.txt      # Python dependencies
-├── setup_windows.ps1     # Windows setup script
+fraud-graph-gnn/ \
+├── data_gen.py           # Synthetic graph generation\
+├── features.py           # Graph feature extraction\
+├── dataset.py            # PyTorch Geometric data conversion\
+├── model.py              # GCN model architecture\
+├── train_improved.py     # Enhanced training pipeline\
+├── visualize_topk.py     # Suspicious nodes visualization\
+├── utils.py              # Utility functions\
+├── requirements.txt      # Python dependencies\
+├── setup_windows.ps1     # Windows setup script\
 └── README.md
 
 
@@ -126,10 +126,10 @@ python train_improved.py \
 
 ### Key Training Arguments
 
---n_nodes: Number of accounts in synthetic graph (default: 1000)
---epochs: Maximum training epochs (default: 100)
---hidden: Hidden layer dimension (default: 64)
---dropout: Dropout rate (default: 0.5)
+--n_nodes: Number of accounts in synthetic graph (default: 1000) \
+--epochs: Maximum training epochs (default: 100)\
+--hidden: Hidden layer dimension (default: 64)\
+--dropout: Dropout rate (default: 0.5)\
 --lr: Learning rate (default: 0.01)
 
 # Model Architecture
@@ -164,13 +164,15 @@ train_history.csv: Training metrics history
 topk_subgraph.png: Visualization of suspicious subgraph
 injected_nodes.json: Ground truth injection patterns
 
-# Example Outputs
+# Example Results
 
-Picture2.png
-*ROC Curve showing model
+<img width="701" height="579" alt="Picture2" src="https://github.com/user-attachments/assets/93a5576b-1290-42b2-aedf-42a6fe3172e6" />
 
-Picture1.png
-Top suspicious nodes and neighbors (red = fraudulent)
+*ROC Curve showing model*
+
+<img width="1430" height="953" alt="Picture1" src="https://github.com/user-attachments/assets/519ec0d5-8cde-455f-a65e-314dccdaae47" />
+
+*Top suspicious nodes and neighbors (red = fraudulent)*
 
 # Methodology
 
