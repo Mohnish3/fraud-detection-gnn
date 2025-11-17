@@ -77,7 +77,7 @@ Data Generation → Feature Extraction → Dataset Preparation → GNN Training 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Mohnish3/fraud-graph-gnn.git
+   git clone https://github.com/Mohnish3/fraud-detection-gnn.git
    cd fraud-graph-gnn
 
 2. Set up virtual environment (Windows)
@@ -166,10 +166,10 @@ injected_nodes.json: Ground truth injection patterns
 
 # Example Outputs
 
-https://Figures/Picture2.png
+Picture2.png
 *ROC Curve showing model
 
-https://Figures/Picture1.png
+Picture1.png
 Top suspicious nodes and neighbors (red = fraudulent)
 
 # Methodology
