@@ -20,7 +20,7 @@ A comprehensive framework for detecting fraudulent financial activities using Gr
   - [Project Structure](#project-structure)
   - [Advanced Configuration](#advanced-configuration)
     - [Training Parameters](#training-parameters)
-    - [Key Arguments](#key-arguments)
+    - [Key Training Arguments](#key-training-arguments)
   - [Model Architecture](#model-architecture)
   - [Fraud Patterns Detected](#fraud-patterns-detected)
     - [1. Circular Transactions](#1-circular-transactions)
@@ -112,7 +112,7 @@ fraud-graph-gnn/ \
 └── README.md
 
 
-# Advanced Confirguration
+# Advanced Configuration
 
 ## Training Parameters
 
@@ -134,34 +134,34 @@ python train_improved.py \
 
 # Model Architecture
 
-Architecture: 2-layer Graph Convolutional Network (GCN)
-Input Features: 12-dimensional node features
-Hidden Dimension: 64 units
-Activation: ReLU
-Dropout: 0.5
-Loss Function: Weighted Cross Entropy
+Architecture: 2-layer Graph Convolutional Network (GCN) \
+Input Features: 12-dimensional node features \
+Hidden Dimension: 64 units \
+Activation: ReLU \
+Dropout: 0.5 \
+Loss Function: Weighted Cross Entropy \
 Optimizer: Adam (lr=0.01, weight_decay=1e-4)
 
 # Fraud Patterns Detected
 
 ## 1. Circular Transactions
 
-Multiple accounts transferring money in circular paths
-High-frequency, structured payment cycles
+Multiple accounts transferring money in circular paths \
+High-frequency, structured payment cycles \
 Detected through cycle participation features
 
 ## 2. Money Laundering Rings
 
-Densely connected subgraphs
-High internal transaction density
+Densely connected subgraphs \
+High internal transaction density \
 Structured to obscure money origins
 
 # Generated Outputs
 
-best_model_improved.pt: Trained model weights
-node_scores.csv: Fraud probability scores for all nodes
-train_history.csv: Training metrics history
-topk_subgraph.png: Visualization of suspicious subgraph
+best_model_improved.pt: Trained model weights \
+node_scores.csv: Fraud probability scores for all nodes \
+train_history.csv: Training metrics history \
+topk_subgraph.png: Visualization of suspicious subgraph \
 injected_nodes.json: Ground truth injection patterns
 
 # Example Results
@@ -178,29 +178,29 @@ injected_nodes.json: Ground truth injection patterns
 
 ## Feature Engineering
 
-Structural Features: In/Out degree, clustering coefficient
-Centrality Measures: PageRank, Closeness, Betweenness
-Transaction Features: Amount statistics, frequency
-Behavioral Features: Cycle participation scores
+Structural Features: In/Out degree, clustering coefficient \
+Centrality Measures: PageRank, Closeness, Betweenness \
+Transaction Features: Amount statistics, frequency \
+Behavioral Features: Cycle participation scores 
 
 ## Data Splitting
 
-Training: 70% of nodes
-Validation: 15% of nodes
+Training: 70% of nodes \
+Validation: 15% of nodes \
 Test: 15% of nodes
 
 # Development
 
 ## Adding New Features
 
-Extend features.py with new feature computation
-Update feature dimension in model.py
+Extend features.py with new feature computation \
+Update feature dimension in model.py \
 Retrain model with updated features
 
 ## Custom Fraud Patterns
 
-Modify data_gen.py to inject new pattern types
-Update feature computation if needed
+Modify data_gen.py to inject new pattern types \
+Update feature computation if needed \
 Retrain and evaluate model performance
 
    
