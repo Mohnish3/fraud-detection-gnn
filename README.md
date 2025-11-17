@@ -35,7 +35,7 @@ A comprehensive framework for detecting fraudulent financial activities using Gr
     - [Custom Fraud Patterns](#custom-fraud-patterns)
  
 
-## 🎯 Key Features
+## Key Features
 
 - **Synthetic Data Generation**: Privacy-preserving synthetic financial transaction graphs
 - **Graph Feature Engineering**: Comprehensive node features including centrality measures and cycle participation
@@ -43,7 +43,7 @@ A comprehensive framework for detecting fraudulent financial activities using Gr
 - **Interpretable Results**: Visualization of suspicious subgraphs and model performance
 - **Production-Ready Pipeline**: End-to-end workflow from data generation to visualization
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 | Metric | Value |
 |--------|-------|
@@ -54,7 +54,7 @@ A comprehensive framework for detecting fraudulent financial activities using Gr
 | Recall | 0.85 |
 | F1-Score | 0.86 |
 
-## 🏗️ System Architecture
+## System Architecture
 Data Generation → Feature Extraction → Dataset Preparation → GNN Training → Evaluation → Visualization
 
 
@@ -67,7 +67,6 @@ Data Generation → Feature Extraction → Dataset Preparation → GNN Training 
 - **`train_improved.py`**: Training pipeline with early stopping
 - **`visualize_topk.py`**: Suspicious nodes visualization
 
-## 🚀 Quick Start
 
 ### Prerequisites
 
@@ -90,16 +89,16 @@ Data Generation → Feature Extraction → Dataset Preparation → GNN Training 
    .\setup_windows.ps1
 
 
-### Basic Usage
+# Basic Usage
 
-1. Train the model
+1. **Train the model**
    python train_improved.py --n_nodes 1000 --epochs 80
 2. Generate visualization
    python visualize_topk.py
 3. View Results
    Start-Process .\topk_subgraph.png
 
-### Project Structure
+# Project Structure
 fraud-graph-gnn/
 ├── data_gen.py           # Synthetic graph generation
 ├── features.py           # Graph feature extraction
@@ -112,11 +111,12 @@ fraud-graph-gnn/
 ├── setup_windows.ps1     # Windows setup script
 └── README.md
 
-### Advanced Confirguration
+
+# Advanced Confirguration
 
 ## Training Parameters
 
-# Custom training configuration
+### Custom training configuration
 python train_improved.py \
   --n_nodes 2000 \
   --epochs 100 \
@@ -124,7 +124,7 @@ python train_improved.py \
   --dropout 0.3 \
   --lr 0.001
 
-  ## Key Training Arguments
+### Key Training Arguments
 
 --n_nodes: Number of accounts in synthetic graph (default: 1000)
 --epochs: Maximum training epochs (default: 100)
@@ -132,7 +132,7 @@ python train_improved.py \
 --dropout: Dropout rate (default: 0.5)
 --lr: Learning rate (default: 0.01)
 
-### Model Architecture
+# Model Architecture
 
 Architecture: 2-layer Graph Convolutional Network (GCN)
 Input Features: 12-dimensional node features
@@ -142,7 +142,7 @@ Dropout: 0.5
 Loss Function: Weighted Cross Entropy
 Optimizer: Adam (lr=0.01, weight_decay=1e-4)
 
-### Fraud Patterns Detected
+# Fraud Patterns Detected
 
 ## 1. Circular Transactions
 
@@ -156,7 +156,7 @@ Densely connected subgraphs
 High internal transaction density
 Structured to obscure money origins
 
-### Generated Outputs
+# Generated Outputs
 
 best_model_improved.pt: Trained model weights
 node_scores.csv: Fraud probability scores for all nodes
@@ -164,7 +164,7 @@ train_history.csv: Training metrics history
 topk_subgraph.png: Visualization of suspicious subgraph
 injected_nodes.json: Ground truth injection patterns
 
-### Example Outputs
+# Example Outputs
 
 https://Figures/Picture2.png
 *ROC Curve showing model
@@ -172,7 +172,7 @@ https://Figures/Picture2.png
 https://Figures/Picture1.png
 Top suspicious nodes and neighbors (red = fraudulent)
 
-### Methodology
+# Methodology
 
 ## Feature Engineering
 
@@ -187,7 +187,7 @@ Training: 70% of nodes
 Validation: 15% of nodes
 Test: 15% of nodes
 
-### Development
+# Development
 
 ## Adding New Features
 
