@@ -168,7 +168,7 @@ injected_nodes.json: Ground truth injection patterns
 
 <img width="701" height="579" alt="Picture2" src="https://github.com/user-attachments/assets/93a5576b-1290-42b2-aedf-42a6fe3172e6" />
 
-*ROC Curve showing model*
+*ROC Curve showing model performance*
 
 <img width="1430" height="953" alt="Picture1" src="https://github.com/user-attachments/assets/519ec0d5-8cde-455f-a65e-314dccdaae47" />
 
